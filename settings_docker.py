@@ -51,7 +51,8 @@ if not os.environ.get('UBERTOOL_REST_SERVER'):
 #     SECRET_KEY = "ShhhDontTellAnyone"
     
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'wx$p52y!1p!*p$$y^d!f9@5=)3o#88+08-i9_mc8*-8h+x2&@w'
+with open('splash_app/secret_key_django_dropbox.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False

@@ -7,11 +7,8 @@ import os
 from django.conf import settings
 
 
-def eco_landing_redirect(request):
-    return redirect('/ubertool')
-
 def qed_splash_page(request):
-
+    """ Returns the html of the landing page for qed. """
     #html = render_to_string('01uberheader_main_drupal.html', {
     #    'SITE_SKIN': os.environ['SITE_SKIN'],
     #    'TITLE': 'Error'})
@@ -25,6 +22,7 @@ def qed_splash_page(request):
     return response
 
 def file_not_found(request):
+    """ Returns generic page whenever there is a problem. """
     html = render_to_string('01uberheader_main_drupal.html', {
         'SITE_SKIN': os.environ['SITE_SKIN'],
         'TITLE': 'Error'})
