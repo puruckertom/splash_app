@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 import django.core.handlers.wsgi
 import os
 
+print('wsgi_local.py')
 # Settings.py declaration
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "splash_app.settings")
 
 # entry point
 app = django.core.handlers.wsgi.WSGIHandler()
