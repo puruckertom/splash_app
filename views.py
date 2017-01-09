@@ -10,8 +10,10 @@ from django.conf import settings
 def qed_splash_page(request):
     """ Returns the html of the landing page for qed. """
     html = render_to_string('01epa_drupal_header.html', {})
-    html += render_to_string('02qed_splash_landing.html', {'title': 'qed'})
-    html += render_to_string('03epa_drupal_footer.html', {})
+    html += render_to_string('02epa_drupal_header_bluestripe.html', {})
+    html += render_to_string('03epa_drupal_section_title.html', {})
+    html += render_to_string('04qed_splash_landing.html', {'title': 'qed'})
+    html += render_to_string('10epa_drupal_footer.html', {})
 
     response = HttpResponse()
     response.write(html)
@@ -22,7 +24,7 @@ def file_not_found(request):
     """ Returns generic page whenever there is a problem. """
     html = render_to_string('01epa_drupal_header.html', {})
     html += render_to_string('02epa_drupal_404.html', {'title': 'qed'})
-    html += render_to_string('03epa_drupal_footer.html', {})
+    html += render_to_string('10epa_drupal_footer.html', {})
 
     response = HttpResponse()
     response.write(html)
