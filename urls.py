@@ -6,7 +6,8 @@ import views
 urlpatterns = [
     #url(r'^api/', include('api.urls')),
     #url(r'^rest/', include('REST.urls')),
-    url(r'^$', views.qed_splash_page),
+    url(r'^$', views.qed_splash_page_public),
+    #url(r'^$', views.qed_splash_page_intranet),
     # url(r'^admin/', include(admin.site.urls)),
 ]
 
