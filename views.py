@@ -15,12 +15,10 @@ def qed_splash_page(request):
     if settings.IS_PUBLIC:
         html += render_to_string('04qed_splash_landing_public.html', {'title': 'qed'})
     else:
-        tml += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
+        html += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
     html += render_to_string('10epa_drupal_footer.html', {})
-
     response = HttpResponse()
     response.write(html)
-
     return response
 
 
