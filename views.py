@@ -16,6 +16,7 @@ def qed_splash_page(request):
         html += render_to_string('04qed_splash_landing_public.html', {'title': 'qed'})
     else:
         html += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
+    html += render_to_string('09epa_drupal_splashscripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
     response = HttpResponse()
     response.write(html)
