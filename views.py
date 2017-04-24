@@ -1,10 +1,8 @@
-from django.template.loader import render_to_string
-from django.http import HttpResponse
-from django.shortcuts import redirect
-#import links_left
-import os
-#import secret
+# import links_left
+# import secret
 from django.conf import settings
+from django.http import HttpResponse
+from django.template.loader import render_to_string
 
 
 def qed_splash_page(request):
