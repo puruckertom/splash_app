@@ -5,7 +5,7 @@ import unittest
 
 test = {}
 
-servers = ["http://127.0.0.1:8000/","https://qedinternal.epa.gov/"]
+servers = ["http://127.0.0.1:8000/", "https://qedinternal.epa.gov/", "https://qed.epa.gov/"]
 
 pages = [""]
 
