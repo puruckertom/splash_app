@@ -26,7 +26,7 @@ class TestQEDHost(unittest.TestCase):
         pass
 
     @staticmethod
-    def test_qed_200():
+    def test_qed_splash_200():
         test_name = "Splash page access"
         try:
             assert_error = False
