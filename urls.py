@@ -1,6 +1,7 @@
 #  https://docs.djangoproject.com/en/1.6/intro/tutorial03/
 from django.conf import settings
-from django.conf.urls import include, url
+from django.conf.urls import url
+
 import views
 
 if settings.IS_PUBLIC:
