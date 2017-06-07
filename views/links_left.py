@@ -20,13 +20,13 @@ def ordered_list(model=None, page=None):
             ('hms', 'hms'),
             ('hwbi', 'hwbi'),
             ('pisces', 'pisces'),
-            ('uber', 'uber'),
+            ('ubertool', 'ubertool'),
             ])
         ),
         ('Alpha', OrderedDict([
             ('sam', 'sam'),
             ('pop', 'pop'),
-            ('wqc', 'wqc')
+            ('wqt', 'wqt')
         ])
          ),
         ('Documentation', OrderedDict([

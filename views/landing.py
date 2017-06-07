@@ -14,21 +14,21 @@ def splash_landing_page(request):
     #html = render_to_string('01epa_drupal_header.html', {})
     html = render_to_string('01epa_drupal_header.html', {
         'SITE_SKIN': os.environ['SITE_SKIN'],
-        'TITLE': u"\u00FCbertool"
+        'TITLE': u"Q.E.D."
     })
     #html = render_to_string('01uberheader_main_drupal.html', {
     #    'SITE_SKIN': os.environ['SITE_SKIN'],
     #    'TITLE': u"\u00FCbertool"
     #})
     html += render_to_string('02epa_drupal_header_bluestripe_onesidebar.html', {})
-    html += render_to_string('03epa_drupal_section_title_ubertool.html', {})
+    html += render_to_string('03epa_drupal_section_title_splash.html', {})
 
     #main body of text
     #html += render_to_string('04uber_drupal_frog_intro.html', {})
     #http://jsfiddle.net/9zGQ8/
 
     html += render_to_string('06ubertext_start_index_drupal.html', {
-        'TITLE': 'Ecological assessment of pesticides',
+        'TITLE': 'Environmental Models and Services',
         'TEXT_PARAGRAPH': xx
     })
     html += render_to_string('07ubertext_end_drupal.html', {})
