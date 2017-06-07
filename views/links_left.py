@@ -16,7 +16,7 @@ def ordered_list(model=None, page=None):
         ('Beta', OrderedDict([
             ('cts', 'cts'),
             ('cyan', 'cyan'),
-            ('hem', 'hwbi'),
+            ('hem', 'hem'),
             ('hms', 'hms'),
             ('hwbi', 'hwbi'),
             ('pisces', 'pisces'),
