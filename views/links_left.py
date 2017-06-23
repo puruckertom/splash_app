@@ -24,7 +24,7 @@ def ordered_list(model=None, page=None):
             ])
         ),
         ('Alpha', OrderedDict([
-            ('sam_new', 'sam_new'),
+            ('sam', 'sam'),
             ('pop', 'pop'),
             ('wqt', 'wqt')
         ])
