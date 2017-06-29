@@ -37,10 +37,10 @@ class TestQEDHost(unittest.TestCase):
                 assert_error = True
             except Exception as e:
                 # handle any other exception
-                print "Error '{0}' occured. Arguments {1}.".format(e.message, e.args)
+
         except Exception as e:
             # handle any other exception
-            print "Error '{0}' occured. Arguments {1}.".format(e.message, e.args)
+
         finally:
             linkcheck_helper.write_report(test_name, assert_error, pages_to_test, response)
         return

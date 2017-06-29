@@ -45,7 +45,7 @@ and Prevention Behavioral Risk Factor Surveillance System, and others. These dat
 using multiple linear regression and relationship-function statistical techniques to identify
 correlations and calculate coefficient values for each service. The HWBI model uses the resultant
 coefficients to process 22 economic, ecosystem, and social services values to calculate a total HWBI
-score as well as eight values for the “domains of well-being”: Connection to Nature, Cultural Fulfillment,
+score as well as eight values for the "domains of well-being": Connection to Nature, Cultural Fulfillment,
 Education, Health, Leisure Time, Living Standards, Safety & Security, and Social Cohesion.
 </p>
 
