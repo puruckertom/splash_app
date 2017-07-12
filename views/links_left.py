@@ -10,29 +10,24 @@ def ordered_list(model=None, page=None):
         ])
          ),
         ('Public', OrderedDict([
-                #('', ''),
+            ('NA', ''),
             ])
         ),
-        ('Beta', OrderedDict([
+        ('Beta (internal)', OrderedDict([
             ('cts', 'cts'),
             ('cyan', 'cyan'),
             ('hem', 'hem'),
             ('hms', 'hms'),
             ('hwbi', 'hwbi'),
             ('pisces', 'pisces'),
-            ('ubertool', 'ubertool'),
+            ('&uuml;tool', 'ubertool'),
+            ('wqt', 'wqt'),
             ])
         ),
-        ('Alpha', OrderedDict([
-            ('sam', 'sam'),
-            ('pop', 'pop'),
-            ('wqt', 'wqt')
-        ])
-         ),
         ('Documentation', OrderedDict([
-                ('Source Code', 'docs'),
+                #TODO: link qed_api
                 ('API Documentation', 'api'),
-                ('Links', 'links')
+                ('Wiki', '/github.com/quanted/qed/wiki'),
             ])
         )
         # ('&uuml;bertool', OrderedDict([
