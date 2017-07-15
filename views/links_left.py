@@ -1,5 +1,5 @@
-from django.template.loader import render_to_string
 from collections import OrderedDict
+from django.template.loader import render_to_string
 
 
 # 03ubertext_links_left:
@@ -10,10 +10,10 @@ def ordered_list(model=None, page=None):
         ])
          ),
         ('Public', OrderedDict([
-            ('NA', ''),
+            ('qed.epa.gov', 'qed_external_redirect'),
             ])
         ),
-        ('Beta (internal)', OrderedDict([
+        ('Apps (Internal)', OrderedDict([
             ('cts', 'cts'),
             ('cyan', 'cyan'),
             ('hem', 'hem'),
@@ -24,10 +24,12 @@ def ordered_list(model=None, page=None):
             ('wqt', 'wqt'),
             ])
         ),
-        ('Documentation', OrderedDict([
-                #TODO: link qed_api
-                ('API Documentation', 'api'),
-                ('Wiki', '/github.com/quanted/qed/wiki'),
+        ('Docs', OrderedDict([
+            #TODO: link qed_api
+            ('api documentation', 'api'),
+            ('rest endpoints', 'rest'),
+            ('source code', 'source_code_redirect'),
+            ('wiki', 'wiki_external_redirect'),
             ])
         )
         # ('&uuml;bertool', OrderedDict([

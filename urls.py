@@ -1,7 +1,6 @@
 #  https://docs.djangoproject.com/en/1.6/intro/tutorial03/
 from django.conf import settings
 from django.conf.urls import url
-
 from .views import landing
 
 if settings.IS_PUBLIC:
@@ -17,6 +16,11 @@ else:
         #url(r'^api/', include('api.urls')),
         #url(r'^rest/', include('REST.urls')),
         url(r'^$', landing.splash_landing_page),
+        url(r'^api$', landing.api_landing_page),
+        url(r'^rest$', landing.rest_landing_page),
+        url(r'^qed_external_redirect$', landing.qed_external_redirect),
+        url(r'^source_code_redirect$', landing.source_code_redirect),
+        url(r'^wiki_external_redirect$', landing.wiki_external_redirect),
         #url(r'^$', views.qed_splash_page_intranet),
         # url(r'^admin/', include(admin.site.urls)),
     ]
