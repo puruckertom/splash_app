@@ -1,0 +1,2 @@
+<p>
+A general Wiki oriented towards developers is available <a href='https://github.com/quanted/qed/wiki'>here</a>.

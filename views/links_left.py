@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 def ordered_list(model=None, page=None):
     link_dict = OrderedDict([
         ('Q.E.D.', OrderedDict([
-            ('home', ''),
+            ('home (qedinternal)', ''),
         ])
          ),
         ('Public', OrderedDict([
@@ -24,12 +24,12 @@ def ordered_list(model=None, page=None):
             ('wqt', 'wqt'),
             ])
         ),
-        ('Docs', OrderedDict([
+        ('Docs (Internal)', OrderedDict([
             #TODO: link qed_api
             ('api documentation', 'api'),
             ('rest endpoints', 'rest'),
-            ('source code', 'source_code_redirect'),
-            ('wiki', 'wiki_external_redirect'),
+            ('source code', 'source'),
+            ('wiki', 'wiki'),
             ])
         )
         # ('&uuml;bertool', OrderedDict([
