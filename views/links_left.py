@@ -1,19 +1,19 @@
-from django.template.loader import render_to_string
 from collections import OrderedDict
+from django.template.loader import render_to_string
 
 
 # 03ubertext_links_left:
 def ordered_list(model=None, page=None):
     link_dict = OrderedDict([
         ('Q.E.D.', OrderedDict([
-            ('home', ''),
+            ('home (qedinternal)', ''),
         ])
          ),
         ('Public', OrderedDict([
-            ('NA', ''),
+            ('qed.epa.gov', 'qed_external_redirect'),
             ])
         ),
-        ('Beta (internal)', OrderedDict([
+        ('Apps (Internal)', OrderedDict([
             ('cts', 'cts'),
             ('cyan', 'cyan'),
             ('hem', 'hem'),
@@ -24,10 +24,12 @@ def ordered_list(model=None, page=None):
             ('wqt', 'wqt'),
             ])
         ),
-        ('Documentation', OrderedDict([
-                #TODO: link qed_api
-                ('API Documentation', 'api'),
-                ('Wiki', '/github.com/quanted/qed/wiki'),
+        ('Docs (Internal)', OrderedDict([
+            #TODO: link qed_api
+            ('api documentation', 'api'),
+            ('rest endpoints', 'rest'),
+            ('source code', 'source'),
+            ('wiki', 'wiki'),
             ])
         )
         # ('&uuml;bertool', OrderedDict([

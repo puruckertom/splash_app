@@ -1,0 +1,17 @@
+<p>
+Representation State Transfer (RESTful) endpoints for environmental model and service web applications.
+</p>
+<ul>
+<li><a href='/rest/ubertool/agdrift/'>agdrift</a>
+<li><a href='/rest/ubertool/beerex/'>beerex</a>
+<li><a href='/rest/ubertool/earthworm/'>earthworm</a>
+<li><a href='/rest/ubertool/iec/'>iec</a>
+<li><a href='/rest/ubertool/kabam/'>kabam</a>
+<li><a href='/rest/ubertool/rice/'>rice</a>
+<li><a href='/rest/ubertool/sam/'>sam</a>
+<li><a href='/rest/ubertool/sip/'>sip</a>
+<li><a href='/rest/ubertool/stir/'>stir</a>
+<li><a href='/rest/ubertool/terrplant/'>terrplant</a>
+<li><a href='/rest/ubertool/therps/'>therps</a>
+<li><a href='/rest/ubertool/trex/'>trex</a>
+</ul>

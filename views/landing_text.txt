@@ -71,21 +71,6 @@ for a number of ecological species under regulations that the EPA is responsible
 of pesticides and the protection of endangered species.
 </p>
 
-<h3><a href="/pop">pop</a></h3>
-<p>
-A description of pop.
-</p>
-
-<h3><a href="/sam">Spatial Aquatic Model</a></h3>
-<p>
-The Spatial Aquatic Model (SAM) is an exposure model designed to simulate the magnitude, duration, and location of
-aquatic exposure concentrations of pesticides. Pesticide concentrations are estimated as a function of chemical
-properties, environmental factors, and crop/management practices. Outputs include pesticide exposure concentrations
-in a receiving water body at the watershed or basin level. Concentrations also can be compared to user-defined
-toxicity thresholds in output tables, maps, and summary histograms to characterize the duration, frequency, and
-location of exceedances.
-</p>
-
 <h3><a href="/wqt">wqt</a></h3>
 <p>
 A description of wqt
