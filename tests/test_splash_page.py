@@ -1,4 +1,4 @@
-import linkcheck_helper
+from . import linkcheck_helper
 import numpy.testing as npt
 import requests
 import unittest
@@ -35,12 +35,12 @@ class TestQEDHost(unittest.TestCase):
                 npt.assert_array_equal(response, 200, '200 error', True)
             except AssertionError:
                 assert_error = True
-            except Exception as e:
+            except ValueError:
                 # handle any other exception
-
-        except Exception as e:
+                pass
+        except ValueError:
             # handle any other exception
-
+            pass
         finally:
             linkcheck_helper.write_report(test_name, assert_error, pages_to_test, response)
         return

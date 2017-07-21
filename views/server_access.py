@@ -1,9 +1,9 @@
-from django.conf import settings
-from django.http import HttpResponse
 from django.shortcuts import redirect
-from django.template.loader import render_to_string
-from . import links_left
 import os
+# from django.conf import settings
+# from django.http import HttpResponse
+# from django.template.loader import render_to_string
+# from . import links_left
 
 # proxies to various back end machines
 def qed_api_ubertool(request):
