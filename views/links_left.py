@@ -25,7 +25,7 @@ def ordered_list(model=None, page=None):
             ])
         ),
         ('Docs (Internal)', OrderedDict([
-            #TODO: link qed_api
+            # link qed_api
             ('api documentation', 'api'),
             ('rest endpoints', 'rest'),
             ('source code', 'source'),
