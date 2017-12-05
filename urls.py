@@ -9,7 +9,7 @@ if settings.IS_PUBLIC:
         #url(r'^api/', include('api.urls')),
         #url(r'^rest/', include('REST.urls')),
         # url(r'^$', landing.qed_splash_page_old),
-        url(r'^$', landing.qed_splash_page),
+        url(r'^$', landing.splash_landing_page),
         #url(r'^$', views.qed_splash_page_intranet),
         # url(r'^admin/', include(admin.site.urls)),
     ]
