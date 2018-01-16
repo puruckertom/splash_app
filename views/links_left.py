@@ -14,14 +14,14 @@ def ordered_list(model=None, page=None):
             ])
         ),
         ('Apps (Internal)', OrderedDict([
-            ('cts', 'cts'),
-            ('cyan', 'cyan'),
-            ('hem', 'hem'),
-            ('hms', 'hms'),
-            ('hwbi', 'hwbi'),
-            ('pisces', 'pisces'),
+            ('cts', 'cts/'),
+            ('cyan', 'cyan/'),
+            ('hem', 'hem/'),
+            ('hms', 'hms/'),
+            ('hwbi', 'hwbi/'),
+            ('pisces', 'pisces/'),
             ('&uuml;tool', 'ubertool/'),
-            ('wqt', 'wqt'),
+            ('wqt', 'wqt/'),
             ])
         ),
         ('Docs (Internal)', OrderedDict([

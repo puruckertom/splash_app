@@ -2,7 +2,7 @@
 from django.conf import settings
 from django.conf.urls import url
 # Django 2.0 url import
-# from django.urls import include, path, re_path
+from django.urls import include, path, re_path
 from .views import landing
 from .views import server_access
 
@@ -20,22 +20,22 @@ else:
     urlpatterns = [
         # url(r'^api/', include('api.urls')),
         # url(r'^rest/', include('REST.urls')),
-        # re_path(r'^$', landing.splash_landing_page),
-        # re_path(r'^api$', landing.api_landing_page),
-        # re_path(r'^api/ubertool$', server_access.qed_api_ubertool),
-        # re_path(r'^rest/(?P<model>.*?)/?$', server_access.ubertool_rest_model),
-        # re_path(r'^rest$', landing.rest_landing_page),
-        # re_path(r'^qed_external_redirect$', landing.qed_external_redirect),
-        # re_path(r'^source$', landing.source_landing_page),
-        # re_path(r'^wiki$', landing.wiki_landing_page),
-        url(r'^$', landing.splash_landing_page),
-        url(r'^api$', landing.api_landing_page),
-        url(r'^api/ubertool$', server_access.qed_api_ubertool),
-        url(r'^rest/(?P<model>.*?)/?$', server_access.ubertool_rest_model),
-        url(r'^rest$', landing.rest_landing_page),
-        url(r'^qed_external_redirect$', landing.qed_external_redirect),
-        url(r'^source$', landing.source_landing_page),
-        url(r'^wiki$', landing.wiki_landing_page),
+        re_path(r'^$', landing.splash_landing_page),
+        re_path(r'^api$', landing.api_landing_page),
+        re_path(r'^api/ubertool$', server_access.qed_api_ubertool),
+        re_path(r'^rest/(?P<model>.*?)/?$', server_access.ubertool_rest_model),
+        re_path(r'^rest$', landing.rest_landing_page),
+        re_path(r'^qed_external_redirect$', landing.qed_external_redirect),
+        re_path(r'^source$', landing.source_landing_page),
+        re_path(r'^wiki$', landing.wiki_landing_page),
+        # url(r'^$', landing.splash_landing_page),
+        # url(r'^api$', landing.api_landing_page),
+        # url(r'^api/ubertool$', server_access.qed_api_ubertool),
+        # url(r'^rest/(?P<model>.*?)/?$', server_access.ubertool_rest_model),
+        # url(r'^rest$', landing.rest_landing_page),
+        # url(r'^qed_external_redirect$', landing.qed_external_redirect),
+        # url(r'^source$', landing.source_landing_page),
+        # url(r'^wiki$', landing.wiki_landing_page),
 
         #url(r'^$', views.qed_splash_page_intranet),
         # url(r'^admin/', include(admin.site.urls)),
