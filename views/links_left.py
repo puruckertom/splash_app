@@ -20,7 +20,7 @@ def ordered_list(model=None, page=None):
             ('hms', 'hms/'),
             ('hwbi', 'hwbi/'),
             ('pisces', 'pisces/'),
-            ('&uuml;tool', 'ubertool/'),
+            ('&uuml;tool', 'pram/'),
             ('wqt', 'wqt/'),
             ])
         ),
@@ -40,7 +40,7 @@ def ordered_list(model=None, page=None):
         #         ('Aquatic Toxicity', 'aquatic_toxicity'),
         #         ('Terrestrial Toxicity', 'terrestrial_toxicity'),
         #         ('Ecosystem Inputs', 'ecosystem_inputs'),
-        #         ('Run &uuml;bertool', 'run_ubertool'),
+        #         ('Run &uuml;bertool', 'run_pram'),
         #         ('Saved Runs', 'user'),
         #     ])
         # ),

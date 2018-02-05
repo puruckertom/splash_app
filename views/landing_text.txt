@@ -61,7 +61,7 @@ turbidity, dissolved oxygen) and stream characteristics (watershed area, mean wi
  abundance of a species to its maximum body size.
 </p>
 
-<h3><a href="/ubertool">ubertool: Ecological risk pesticide registration models</a></h3>
+<h3><a href="/pram">pram: Ecological risk pesticide registration models</a></h3>
 <p>
 The übertool is a cloud-based web application platform that includes a variety of aquatic, terrestrial and
 atmospheric deposition fate and transport models used by the EPA for the ecological risk assessment of pesticides.

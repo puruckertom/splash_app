@@ -49,7 +49,7 @@ def splash_landing_page(request):
 
     #scripts and footer
     # templates_qed/uber2017
-    html += render_to_string('09epa_drupal_ubertool_css.html', {})
+    html += render_to_string('09epa_drupal_pram_css.html', {})
 
     # templates_qed/drupal_2017
     html += render_to_string('10epa_drupal_footer.html', {})
@@ -88,8 +88,8 @@ def wiki_landing_page(request):
     html += links_left.ordered_list()  # fills out 05ubertext_links_left_drupal.html
 
     #scripts and footer
-    html += render_to_string('09epa_drupal_ubertool_css.html', {})
-    #html += render_to_string('09epa_drupal_ubertool_scripts.html', {})
+    html += render_to_string('09epa_drupal_pram_css.html', {})
+    #html += render_to_string('09epa_drupal_pram_scripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
 
     response = HttpResponse()
@@ -126,8 +126,8 @@ def source_landing_page(request):
     html += links_left.ordered_list()  # fills out 05ubertext_links_left_drupal.html
 
     #scripts and footer
-    html += render_to_string('09epa_drupal_ubertool_css.html', {})
-    #html += render_to_string('09epa_drupal_ubertool_scripts.html', {})
+    html += render_to_string('09epa_drupal_pram_css.html', {})
+    #html += render_to_string('09epa_drupal_pram_scripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
 
     response = HttpResponse()
@@ -164,8 +164,8 @@ def api_landing_page(request):
     html += links_left.ordered_list()  # fills out 05ubertext_links_left_drupal.html
 
     #scripts and footer
-    html += render_to_string('09epa_drupal_ubertool_css.html', {})
-    #html += render_to_string('09epa_drupal_ubertool_scripts.html', {})
+    html += render_to_string('09epa_drupal_pram_css.html', {})
+    #html += render_to_string('09epa_drupal_pram_scripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
 
     response = HttpResponse()
@@ -202,8 +202,8 @@ def rest_landing_page(request):
     html += links_left.ordered_list()  # fills out 05ubertext_links_left_drupal.html
 
     #scripts and footer
-    html += render_to_string('09epa_drupal_ubertool_css.html', {})
-    #html += render_to_string('09epa_drupal_ubertool_scripts.html', {})
+    html += render_to_string('09epa_drupal_pram_css.html', {})
+    #html += render_to_string('09epa_drupal_pram_scripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
 
     response = HttpResponse()

@@ -16,7 +16,7 @@ def build_http_links(root_url, href_list):
         elif (url_list[idx][0] == '/'):
             url_list[idx] = root_url + url_list[idx]
         else:
-            url_list[idx] = root_url + '/ubertool' + '/' + url_list[idx]
+            url_list[idx] = root_url + '/pram' + '/' + url_list[idx]
     return url_list
 
 def status_chk(url_list):
