@@ -20,7 +20,7 @@ def ordered_list(model=None, page=None):
             ('hms', 'hms/'),
             ('hwbi', 'hwbi/'),
             ('pisces', 'pisces/'),
-            ('&uuml;tool', 'pram/'),
+            ('pram', 'pram/'),
             ('wqt', 'wqt/'),
             ])
         ),
