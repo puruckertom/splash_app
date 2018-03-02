@@ -1,2 +1,3 @@
 <p>
-Source code for environmental model and service web applications are hosted on github repositories.
+Source code for environmental model and service web applications are hosted on epa-managed github repositories. These repositories
+can be accessed <a href='https://github.com/quanted'>here</a>

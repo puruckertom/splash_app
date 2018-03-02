@@ -45,7 +45,10 @@ def splash_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    html += links_left.ordered_list()
+    if settings.IS_PUBLIC:
+        html += links_left.ordered_list_external()
+    else:
+        html += links_left.ordered_list_internal()
 
     #scripts and footer
     # templates_qed/uber2017
@@ -85,7 +88,12 @@ def wiki_landing_page(request):
         'TEXT_PARAGRAPH': xx
     })
     html += render_to_string('07ubertext_end_drupal.html', {})
-    html += links_left.ordered_list()  # fills out 05ubertext_links_left_drupal.html
+
+    # fills out 05ubertext_links_left_drupal.html
+    if settings.IS_PUBLIC:
+        html += links_left.ordered_list_external()
+    else:
+        html += links_left.ordered_list_internal()
 
     #scripts and footer
     html += render_to_string('09epa_drupal_pram_css.html', {})
@@ -123,7 +131,12 @@ def source_landing_page(request):
         'TEXT_PARAGRAPH': xx
     })
     html += render_to_string('07ubertext_end_drupal.html', {})
-    html += links_left.ordered_list()  # fills out 05ubertext_links_left_drupal.html
+
+    # fills out 05ubertext_links_left_drupal.html
+    if settings.IS_PUBLIC:
+        html += links_left.ordered_list_external()
+    else:
+        html += links_left.ordered_list_internal()
 
     #scripts and footer
     html += render_to_string('09epa_drupal_pram_css.html', {})
@@ -161,7 +174,12 @@ def api_landing_page(request):
         'TEXT_PARAGRAPH': xx
     })
     html += render_to_string('07ubertext_end_drupal.html', {})
-    html += links_left.ordered_list()  # fills out 05ubertext_links_left_drupal.html
+
+    # fills out 05ubertext_links_left_drupal.html
+    if settings.IS_PUBLIC:
+        html += links_left.ordered_list_external()
+    else:
+        html += links_left.ordered_list_internal()
 
     #scripts and footer
     html += render_to_string('09epa_drupal_pram_css.html', {})
@@ -199,7 +217,12 @@ def rest_landing_page(request):
         'TEXT_PARAGRAPH': xx
     })
     html += render_to_string('07ubertext_end_drupal.html', {})
-    html += links_left.ordered_list()  # fills out 05ubertext_links_left_drupal.html
+
+    # fills out 05ubertext_links_left_drupal.html
+    if settings.IS_PUBLIC:
+        html += links_left.ordered_list_external()
+    else:
+        html += links_left.ordered_list_internal()
 
     #scripts and footer
     html += render_to_string('09epa_drupal_pram_css.html', {})
