@@ -13,16 +13,22 @@ def ordered_list(model=None, page=None):
             ('qed.epa.gov', 'qed_external_redirect'),
             ])
         ),
-        ('Apps (Internal)', OrderedDict([
+        ('CSS Apps', OrderedDict([
             ('cts', 'cts/'),
-            ('cyan', 'cyan/'),
             ('hem', 'hem/'),
-            ('hms', 'hms/'),
-            ('hwbi', 'hwbi/'),
             ('pisces', 'pisces/'),
             ('pram', 'pram/'),
-            ('wqt', 'wqt/'),
             ])
+        ),
+        ('SHC Apps', OrderedDict([
+            ('hwbi', 'hwbi/'),
+            ('wqt', 'wqt/'),
+        ])
+        ),
+        ('SSWR Apps', OrderedDict([
+            ('cyan', 'cyan/'),
+            ('hms', 'hms/'),
+        ])
         ),
         ('Docs (Internal)', OrderedDict([
             # link qed_api
