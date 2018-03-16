@@ -52,7 +52,7 @@ def splash_landing_page(request):
 
     #scripts and footer
     # templates_qed/uber2017
-    html += render_to_string('09epa_drupal_pram_css.html', {})
+    html += render_to_string('09epa_drupal_css.html', {})
 
     # templates_qed/drupal_2017
     html += render_to_string('10epa_drupal_footer.html', {})
@@ -96,7 +96,7 @@ def wiki_landing_page(request):
         html += links_left.ordered_list_internal()
 
     #scripts and footer
-    html += render_to_string('09epa_drupal_pram_css.html', {})
+    html += render_to_string('09epa_drupal_css.html', {})
     #html += render_to_string('09epa_drupal_pram_scripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
 
@@ -139,7 +139,7 @@ def source_landing_page(request):
         html += links_left.ordered_list_internal()
 
     #scripts and footer
-    html += render_to_string('09epa_drupal_pram_css.html', {})
+    html += render_to_string('09epa_drupal_css.html', {})
     #html += render_to_string('09epa_drupal_pram_scripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
 
@@ -182,7 +182,7 @@ def api_landing_page(request):
         html += links_left.ordered_list_internal()
 
     #scripts and footer
-    html += render_to_string('09epa_drupal_pram_css.html', {})
+    html += render_to_string('09epa_drupal_css.html', {})
     #html += render_to_string('09epa_drupal_pram_scripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
 
@@ -225,7 +225,7 @@ def rest_landing_page(request):
         html += links_left.ordered_list_internal()
 
     #scripts and footer
-    html += render_to_string('09epa_drupal_pram_css.html', {})
+    html += render_to_string('09epa_drupal_css.html', {})
     #html += render_to_string('09epa_drupal_pram_scripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
 
