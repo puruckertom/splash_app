@@ -2,16 +2,16 @@
 Representation State Transfer (RESTful) endpoints for environmental model and service web applications.
 </p>
 <ul>
-<li><a href='/rest/ubertool/agdrift/'>agdrift</a>
-<li><a href='/rest/ubertool/beerex/'>beerex</a>
-<li><a href='/rest/ubertool/earthworm/'>earthworm</a>
-<li><a href='/rest/ubertool/iec/'>iec</a>
-<li><a href='/rest/ubertool/kabam/'>kabam</a>
-<li><a href='/rest/ubertool/rice/'>rice</a>
-<li><a href='/rest/ubertool/sam/'>sam</a>
-<li><a href='/rest/ubertool/sip/'>sip</a>
-<li><a href='/rest/ubertool/stir/'>stir</a>
-<li><a href='/rest/ubertool/terrplant/'>terrplant</a>
-<li><a href='/rest/ubertool/therps/'>therps</a>
-<li><a href='/rest/ubertool/trex/'>trex</a>
+<li><a href='/rest/pram/agdrift/'>agdrift</a>
+<li><a href='/rest/pram/beerex/'>beerex</a>
+<li><a href='/rest/pram/earthworm/'>earthworm</a>
+<li><a href='/rest/pram/iec/'>iec</a>
+<li><a href='/rest/pram/kabam/'>kabam</a>
+<li><a href='/rest/pram/rice/'>rice</a>
+<li><a href='/rest/pram/sam/'>sam</a>
+<li><a href='/rest/pram/sip/'>sip</a>
+<li><a href='/rest/pram/stir/'>stir</a>
+<li><a href='/rest/pram/terrplant/'>terrplant</a>
+<li><a href='/rest/pram/therps/'>therps</a>
+<li><a href='/rest/pram/trex/'>trex</a>
 </ul>
