@@ -48,6 +48,12 @@ def ordered_list_external(model=None, page=None):
         #     ])
         # ),
     ])
+    
+    return render_to_string('05qed_splash_links_left_drupal.html', {
+        'LINK_DICT': link_dict,
+        'MODEL': model,
+        'PAGE': page
+    })
 
 # 03ubertext_links_left:
 def ordered_list_internal(model=None, page=None):
