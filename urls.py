@@ -12,7 +12,11 @@ if settings.IS_PUBLIC:
         #url(r'^rest/', include('REST.urls')),
         # url(r'^$', landing.qed_splash_page_old),
         # re_path(r'^$', landing.splash_landing_page),
-        url(r'^$', landing.splash_landing_page),
+        re_path(r'^$', landing.splash_landing_page),
+        re_path(r'^api$', landing.api_landing_page),
+        re_path(r'^api/pram$', server_access.qed_api_pram),
+        re_path(r'^source$', landing.source_landing_page),
+        re_path(r'^wiki$', landing.wiki_landing_page),
         #url(r'^$', views.qed_splash_page_intranet),
         # url(r'^admin/', include(admin.site.urls)),
     ]
