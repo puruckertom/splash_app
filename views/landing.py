@@ -250,6 +250,7 @@ def wiki_external_redirect(request):
 def file_not_found(request):
     """ Returns the html of the landing page for qed. """
     html = render_to_string('01epa_drupal_header.html', {})
+
     html += render_to_string('02epa_drupal_header_bluestripe.html', {})
     html += render_to_string('03epa_drupal_section_title.html', {})
     if settings.IS_PUBLIC:
@@ -258,6 +259,47 @@ def file_not_found(request):
         html += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
     html += render_to_string('09epa_drupal_splashscripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
+    response = HttpResponse()
+    response.write(html)
+    return response
+
+
+def page_404(request):
+    
+    page_body = render_to_string("qed_splash_landing_404.html")
+    
+    html = render_to_string('01epa_drupal_header.html', {
+        'SITE_SKIN': os.environ['SITE_SKIN'],
+        'TITLE': u"Q.E.D."
+    })
+
+    # templates_qed/drupal_2017
+    html += render_to_string('02epa_drupal_header_bluestripe_onesidebar.html', {})
+    # templates_qed/splash
+    html += render_to_string('03epa_drupal_section_title_splash.html', {})
+
+    # templates_qed/uber2017
+    html += render_to_string('06ubertext_start_index_drupal.html', {
+        'TITLE': 'Environmental Models and Services',
+        'TEXT_PARAGRAPH': page_body
+    })
+
+    # templates_qed/uber2017
+    html += render_to_string('07ubertext_end_drupal.html', {})
+
+    # fills out 05ubertext_links_left_drupal.html
+    if settings.IS_PUBLIC:
+        html += links_left.ordered_list_external()
+    else:
+        html += links_left.ordered_list_internal()
+
+    #scripts and footer
+    # templates_qed/uber2017
+    html += render_to_string('09epa_drupal_css.html', {})
+
+    # templates_qed/drupal_2017
+    html += render_to_string('10epa_drupal_footer.html', {})
+
     response = HttpResponse()
     response.write(html)
     return response
