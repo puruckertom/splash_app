@@ -259,7 +259,7 @@ def file_not_found(request):
         html += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
     html += render_to_string('09epa_drupal_splashscripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
-    response = HttpResponse()
+    response = HttpResponse(status=404)
     response.write(html)
     return response
 
@@ -300,6 +300,6 @@ def page_404(request):
     # templates_qed/drupal_2017
     html += render_to_string('10epa_drupal_footer.html', {})
 
-    response = HttpResponse()
+    response = HttpResponse(status=404)
     response.write(html)
     return response
