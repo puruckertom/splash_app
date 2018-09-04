@@ -17,6 +17,8 @@ if settings.IS_PUBLIC:
         re_path(r'^api/pram/$', server_access.qed_api_pram),
         re_path(r'^source/$', landing.source_landing_page),
         re_path(r'^wiki/$', landing.wiki_landing_page),
+        re_path(r'^qed_external_redirect/$', landing.qed_external_redirect),
+        re_path(r'^qed_internal_redirect/$', landing.qed_internal_redirect),
         #url(r'^$', views.qed_splash_page_intranet),
         # url(r'^admin/', include(admin.site.urls)),
     ]
@@ -30,6 +32,7 @@ else:
         re_path(r'^rest/(?P<model>.*?)/?$', server_access.pram_rest_model),
         re_path(r'^rest_landing/$', landing.rest_landing_page),
         re_path(r'^qed_external_redirect/$', landing.qed_external_redirect),
+        re_path(r'^qed_internal_redirect/$', landing.qed_internal_redirect),
         re_path(r'^source/$', landing.source_landing_page),
         re_path(r'^wiki/$', landing.wiki_landing_page),
         # url(r'^$', landing.splash_landing_page),

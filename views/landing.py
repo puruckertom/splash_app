@@ -238,6 +238,8 @@ def rest_landing_page(request):
 def qed_external_redirect(request):
     return redirect("https://qed.epa.gov/")
 
+def qed_internal_redirect(request):
+    return redirect("https://qedinternal.epa.gov")
 
 def source_code_redirect(request):
     return redirect("https://github.com/quanted/qed")

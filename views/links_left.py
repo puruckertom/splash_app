@@ -6,8 +6,8 @@ from django.template.loader import render_to_string
 def ordered_list_external(model=None, page=None):
     link_dict = OrderedDict([
         ('Q.E.D.', OrderedDict([
-            ('public', 'qed_external_redirect'),
-            ('epa internal', ''),
+            ('public', 'qed_external_redirect/'),
+            ('epa internal', 'qed_internal_redirect/'),
         ])
          ),
         ('CSS Apps', OrderedDict([
@@ -59,7 +59,7 @@ def ordered_list_internal(model=None, page=None):
     link_dict = OrderedDict([
         ('Q.E.D.', OrderedDict([
             ('public', 'qed_external_redirect'),
-            ('epa internal', ''),
+            ('epa internal', 'qed_internal_redirect'),
         ])
          ),
         ('CSS Apps', OrderedDict([
