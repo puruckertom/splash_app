@@ -29,10 +29,9 @@ def ordered_list_external(model=None, page=None):
         ),
         ('Docs', OrderedDict([
             # link qed_api
-            ('api documentation', 'api'),
-            ('rest endpoints', 'rest'),
-            ('source code', 'source'),
-            ('wiki', 'wiki'),
+            ('api documentation', 'api/'),
+            ('source code', 'source/'),
+            ('wiki', 'wiki/'),
             ])
         )
         # ('&uuml;bertool', OrderedDict([
@@ -82,10 +81,10 @@ def ordered_list_internal(model=None, page=None):
         ),
         ('Docs', OrderedDict([
             # link qed_api
-            ('api documentation', 'api'),
-            ('rest endpoints', 'rest'),
-            ('source code', 'source'),
-            ('wiki', 'wiki'),
+            ('api documentation', 'api/'),
+            ('rest endpoints', 'rest_landing/'),
+            ('source code', 'source/'),
+            ('wiki', 'wiki/'),
             ])
         )
         # ('&uuml;bertool', OrderedDict([
