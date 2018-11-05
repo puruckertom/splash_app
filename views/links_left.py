@@ -13,6 +13,7 @@ def ordered_list_external(model=None, page=None):
         ('CSS Apps', OrderedDict([
             ('cts', 'cts/'),
             # ('hem', 'hem/'),
+            # ('nta', 'nta/'),
             ('pisces', 'pisces/'),
             ('pram', 'pram/'),
             ])
@@ -65,6 +66,7 @@ def ordered_list_internal(model=None, page=None):
         ('CSS Apps', OrderedDict([
             ('cts', 'cts/'),
             ('hem', 'hem/'),
+            ('nta', 'nta/'),
             ('pisces', 'pisces/'),
             ('pram', 'pram/'),
             ])
