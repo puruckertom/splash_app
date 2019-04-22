@@ -74,6 +74,7 @@ def whoami_table():
         html += "CTS_SPARC_SERVER = " + os.environ.get("CTS_SPARC_SERVER") + "<br>"
         html += "CTS_TEST_SERVER = " + os.environ.get("CTS_TEST_SERVER") + "<br>"
         html += "CYAN_REST_SERVER = " + os.environ.get("CYAN_REST_SERVER") + "<br>"
+        html += "DASK_SCHEDULER = " + os.environ.get("DASK_SCHEDULER") + "<br>"
         html += "DJANGO_SETTINGS_FILE = " + os.environ.get("DJANGO_SETTINGS_FILE") + "<br>"
         html += "EPA_ACCESS_TEST_URL = " + os.environ.get("EPA_ACCESS_TEST_URL") + "<br>"
         html += "HMS_BACKEND_SERVER = " + os.environ.get("HMS_BACKEND_SERVER") + "<br>"
