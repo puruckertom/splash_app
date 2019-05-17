@@ -4,12 +4,17 @@ from django.shortcuts import redirect
 from django.template.loader import render_to_string
 from . import links_left
 import os
+import logging
+from bs4 import BeautifulSoup
+
 
 
 def get_html_text(filename):
     local_file = 'splash_app/views/' + filename
     text_file2 = open(os.path.join(os.environ['PROJECT_PATH'], local_file), 'r')
     local_read = text_file2.read()
+    if bool(os.environ.get('UNDER_REVIEW')):
+        return build_landing_text(local_read)
     return local_read
 
 def splash_landing_page(request):
@@ -45,7 +50,9 @@ def splash_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if settings.IS_PUBLIC:
+    if bool(os.environ.get('IS_PUBLIC')) and bool(os.environ.get('UNDER_REVIEW')):
+        html += links_left.ordered_list_review()
+    elif bool(os.environ.get('IS_PUBLIC')) and not bool(os.environ.get('UNDER_REVIEW')):
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
@@ -390,3 +397,22 @@ def page_404(request):
     response = HttpResponse(status=404)
     response.write(html)
     return response
+
+def build_landing_text(full_landing_text):
+    """
+    Builds landing text with beautiful soup.
+    """
+    if not hasattr(settings, 'AZURE_APPS'):
+        return full_landing_text  # returns original landing text
+    try:
+        soup = BeautifulSoup(full_landing_text, 'html.parser')
+        landing_html_string = ""
+        for app in settings.AZURE_APPS:
+            app_link = soup.find('a', '/'+app)
+            app_header = soup.find('a', href='/'+app).parent  # gets app header
+            landing_html_string += str(app_header)
+            landing_html_string += str(app_header.findNext('p'))  # app description
+        return landing_html_string
+    except Exception as e:
+        logging.warning("Error building landing text: {}".format(e))
+        return full_landing_text
