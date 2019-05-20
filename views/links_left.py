@@ -14,17 +14,17 @@ def ordered_list_external(model=None, page=None):
             ('cts', 'cts/'),
             # ('hem', 'hem/'),
             # ('nta', 'nta/'),
-            ('pisces', 'pisces/'),
+            # ('pisces', 'pisces/'),
             ('pram', 'pram/'),
             ])
         ),
         ('SHC Apps', OrderedDict([
             # ('hwbi', 'hwbi/'),
-            ('wqt', 'wqt/'),
+            # ('wqt', 'wqt/'),
         ])
         ),
         ('SSWR Apps', OrderedDict([
-            ('cyan', 'cyan/'),
+            # ('cyan', 'cyan/'),
             ('hms', 'hms/'),
         ])
         ),
@@ -47,50 +47,6 @@ def ordered_list_external(model=None, page=None):
         #         ('Saved Runs', 'user'),
         #     ])
         # ),
-    ])
-    
-    return render_to_string('05qed_splash_links_left_drupal.html', {
-        'LINK_DICT': link_dict,
-        'MODEL': model,
-        'PAGE': page
-    })
-
-# 03ubertext_links_left:
-def ordered_list_review(model=None, page=None):
-    """
-    Links on left for public server under review (e.g., Azure).
-    """
-    link_dict = OrderedDict([
-        ('Q.E.D.', OrderedDict([
-            ('public', 'qed_external_redirect/'),
-            ('epa internal', 'qed_internal_redirect/'),
-        ])
-         ),
-        ('CSS Apps', OrderedDict([
-            ('cts', 'cts/'),
-            # ('hem', 'hem/'),
-            # ('nta', 'nta/'),
-            # ('pisces', 'pisces/'),
-            ('pram', 'pram/'),
-            ])
-        ),
-        # ('SHC Apps', OrderedDict([
-        #     # ('hwbi', 'hwbi/'),
-        #     ('wqt', 'wqt/'),
-        # ])
-        # ),
-        ('SSWR Apps', OrderedDict([
-            # ('cyan', 'cyan/'),
-            ('hms', 'hms/'),
-        ])
-        ),
-        ('Docs', OrderedDict([
-            # link qed_api
-            ('api documentation', 'api/'),
-            ('source code', 'source/'),
-            ('wiki', 'wiki/'),
-            ])
-        )
     ])
     
     return render_to_string('05qed_splash_links_left_drupal.html', {
