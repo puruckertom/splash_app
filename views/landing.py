@@ -94,6 +94,7 @@ def whoami_table():
         html += "OPENCPU_REST_SERVER = " + os.environ.get("OPENCPU_REST_SERVER") + "<br>"
         html += "REDIS_HOSTNAME = " + os.environ.get("REDIS_HOSTNAME") + "<br>"
         html += "REDIS_PORT = " + os.environ.get("REDIS_PORT") + "<br>"
+        html += "VARROAPOP_SERVER = " + os.environ.get("VARROAPOP_SERVER") + "<br>"
         html += "<br>"
     except:
         html = "<br> Missing environmental variable! <br>"
