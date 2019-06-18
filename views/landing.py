@@ -13,7 +13,7 @@ def get_html_text(filename):
     local_file = 'splash_app/views/' + filename
     text_file2 = open(os.path.join(os.environ['PROJECT_PATH'], local_file), 'r')
     local_read = text_file2.read()
-    if bool(os.environ.get('IS_PUBLIC')):
+    if os.environ.get('IS_PUBLIC') == "True":
         return build_landing_text(local_read)
     return local_read
 
@@ -50,7 +50,7 @@ def splash_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if bool(os.environ.get('IS_PUBLIC')):
+    if os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
