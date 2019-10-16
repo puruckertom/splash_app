@@ -340,7 +340,7 @@ def wiki_external_redirect(request):
     return redirect("https://github.com/quanted/qed/wiki")
 
 
-def file_not_found(request):
+def file_not_found(request, exception=None):
     """ Returns the html of the landing page for qed. """
     html = render_to_string('01epa_drupal_header.html', {})
 
@@ -357,7 +357,7 @@ def file_not_found(request):
     return response
 
 
-def page_404(request):
+def page_404(request, exception=None):
     
     page_body = render_to_string("qed_splash_landing_404.html")
     
