@@ -12,19 +12,17 @@ def ordered_list_external(model=None, page=None):
          ),
         ('CSS Apps', OrderedDict([
             ('cts', 'cts/'),
-            # ('hem', 'hem/'),
-            # ('nta', 'nta/'),
+            ('nta', 'nta/'),
             ('pisces', 'pisces/'),
             ('pram', 'pram/'),
             ])
         ),
         ('SHC Apps', OrderedDict([
             # ('hwbi', 'hwbi/'),
-            ('wqt', 'wqt/'),
         ])
         ),
         ('SSWR Apps', OrderedDict([
-            ('cyan', 'cyan/'),
+            # ('cyan', 'cyan/'),
             ('hms', 'hms/'),
         ])
         ),
@@ -65,7 +63,6 @@ def ordered_list_internal(model=None, page=None):
          ),
         ('CSS Apps', OrderedDict([
             ('cts', 'cts/'),
-            ('hem', 'hem/'),
             ('nta', 'nta/'),
             ('pisces', 'pisces/'),
             ('pram', 'pram/'),
@@ -73,7 +70,6 @@ def ordered_list_internal(model=None, page=None):
         ),
         ('SHC Apps', OrderedDict([
             ('hwbi', 'hwbi/'),
-            ('wqt', 'wqt/'),
         ])
         ),
         ('SSWR Apps', OrderedDict([
