@@ -33,18 +33,6 @@ def ordered_list_external(model=None, page=None):
             ('wiki', 'wiki/'),
             ])
         )
-        # ('&uuml;bertool', OrderedDict([
-        #         ('Chemical Selection', 'select_chemical'),
-        #         ('Use/Label/Site Data', 'site_data'),
-        #         ('Pesticide Properties', 'pesticide_properties'),
-        #         ('Exposure Concentrations', 'exposure_concentrations'),
-        #         ('Aquatic Toxicity', 'aquatic_toxicity'),
-        #         ('Terrestrial Toxicity', 'terrestrial_toxicity'),
-        #         ('Ecosystem Inputs', 'ecosystem_inputs'),
-        #         ('Run &uuml;bertool', 'run_pram'),
-        #         ('Saved Runs', 'user'),
-        #     ])
-        # ),
     ])
     
     return render_to_string('05qed_splash_links_left_drupal.html', {
@@ -52,6 +40,27 @@ def ordered_list_external(model=None, page=None):
         'MODEL': model,
         'PAGE': page
     })
+
+
+def ordered_list_prod(model=None, page=None):
+    link_dict = OrderedDict([
+        ('CSS Apps', OrderedDict([
+            ('CTS', 'cts/'),
+            ('PiSCES', 'pisces/'),
+        ])
+        ),
+        ('SSWR Apps', OrderedDict([
+            ('HMS', 'hms/'),
+        ])
+        )
+    ])
+
+    return render_to_string('05qed_splash_links_left_drupal.html', {
+        'LINK_DICT': link_dict,
+        'MODEL': model,
+        'PAGE': page
+    })
+
 
 # 03ubertext_links_left:
 def ordered_list_internal(model=None, page=None):
