@@ -360,10 +360,10 @@ def file_not_found(request, exception=None):
 
     html += render_to_string('02epa_drupal_header_bluestripe.html', {})
     html += render_to_string('03epa_drupal_section_title.html', {})
-    if settings.IS_PUBLIC:
-        html += render_to_string('04qed_splash_landing_public.html', {'title': 'qed'})
-    else:
-        html += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
+    # if settings.IS_PUBLIC:
+    #     html += render_to_string('04qed_splash_landing_public.html', {'title': 'qed'})
+    # else:
+    #     html += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
     html += render_to_string('09epa_drupal_splashscripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
     response = HttpResponse(status=404)
@@ -395,7 +395,9 @@ def page_404(request, exception=None):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if settings.IS_PUBLIC:
+    if settings.IN_PROD:
+        html += links_left.ordered_list_prod()
+    elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
