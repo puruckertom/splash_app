@@ -13,7 +13,6 @@ def ordered_list_external(model=None, page=None):
         ('CSS Apps', OrderedDict([
             ('cts', 'cts/'),
             ('nta', 'nta/'),
-            ('pisces', 'pisces/'),
             ('pram', 'pram/'),
             ])
         ),
@@ -24,6 +23,7 @@ def ordered_list_external(model=None, page=None):
         ('SSWR Apps', OrderedDict([
             # ('cyan', 'cyan/'),
             ('hms', 'hms/'),
+            ('pisces', 'pisces/'),
         ])
         ),
         ('Docs', OrderedDict([
@@ -46,11 +46,11 @@ def ordered_list_prod(model=None, page=None):
     link_dict = OrderedDict([
         ('CSS Apps', OrderedDict([
             ('CTS', 'cts/'),
-            ('PiSCES', 'pisces/'),
         ])
         ),
         ('SSWR Apps', OrderedDict([
             ('HMS', 'hms/'),
+            ('PiSCES', 'pisces/'),
         ])
         )
     ])
@@ -73,7 +73,6 @@ def ordered_list_internal(model=None, page=None):
         ('CSS Apps', OrderedDict([
             ('cts', 'cts/'),
             ('nta', 'nta/'),
-            ('pisces', 'pisces/'),
             ('pram', 'pram/'),
             ])
         ),
@@ -84,6 +83,7 @@ def ordered_list_internal(model=None, page=None):
         ('SSWR Apps', OrderedDict([
             ('cyan', 'cyan/'),
             ('hms', 'hms/'),
+            ('pisces', 'pisces/'),
         ])
         ),
         ('Docs', OrderedDict([
