@@ -6,9 +6,9 @@ from django.urls import include, path, re_path
 from .views import landing
 from .views import server_access
 
-if settings.IS_PROD:
+if settings.IN_PROD:
     urlpatterns = [
-        re_path(r'^$', landing.splash_landing_page),
+        # re_path(r'^$', landing.splash_landing_page),
     ]
 elif settings.IS_PUBLIC:
     urlpatterns = [
