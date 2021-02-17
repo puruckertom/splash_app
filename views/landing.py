@@ -383,20 +383,29 @@ def page_404(request, exception=None):
     # templates_qed/drupal_2017
     html += render_to_string('02epa_drupal_header_bluestripe_onesidebar.html', {})
     # templates_qed/splash
-    html += render_to_string('03epa_drupal_section_title_splash.html', {})
-
-    # templates_qed/uber2017
-    html += render_to_string('06ubertext_start_index_drupal.html', {
-        'TITLE': 'Environmental Models and Services',
-        'TEXT_PARAGRAPH': page_body
-    })
-
-    # templates_qed/uber2017
-    html += render_to_string('07ubertext_end_drupal.html', {})
+    if settings.IN_PROD:
+        html += render_to_string('03epa_drupal_section_notitle_splash.html', {})
+        # templates_qed/uber2017
+        html += render_to_string('06ubertext_start_prod_drupal.html', {
+            'TITLE': "",
+            'TEXT_PARAGRAPH': page_body
+        })
+        # templates_qed/uber2017
+        html += render_to_string('07ubertext_end_drupal.html', {})
+    else:
+        html += render_to_string('03epa_drupal_section_title_splash.html', {})
+        # templates_qed/uber2017
+        html += render_to_string('06ubertext_start_index_drupal.html', {
+            'TITLE': 'Environmental Models and Services',
+            'TEXT_PARAGRAPH': page_body
+        })
+        # templates_qed/uber2017
+        html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
     if settings.IN_PROD:
-        html += links_left.ordered_list_prod()
+        # html += links_left.ordered_list_prod()
+        pass
     elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
