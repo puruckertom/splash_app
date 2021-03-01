@@ -1,0 +1,34 @@
+<p>
+Descriptions of environmental model and service web applications.
+
+<h3><a href="/cts">Chemical Transformation Simulator</a></h3>
+<p>
+The Chemical Transformation Simulator (CTS) provides the calculated physicochemical properties
+of the parent chemical and transformation products, which are predicted as a function of the
+reaction system of interest. This is accomplished through the integration of cheminformatics
+applications for the encoding of process science underlying transformation pathways, computational
+chemistry tools for the calculation of physicochemical properties, and software technologies
+that provide access to on-line databases for environmental descriptors required for estimating
+environmental concentrations.
+</p>
+
+<h3><a href="/hms">Hydrological Micro Services</a></h3>
+<p>
+Hydrological Micro Services (HMS) provides component and model data services relates to hydrology (e.g.,
+evapotranspiration, precipitation, surface runoff, subsurface flow, soil moisture, temperature) and
+water quality (e.g., chemistry, eutrophication, mercury, microbes, nutrients, pH levels, sediment and
+temperature).
+</p>
+
+<h3><a href="/pisces">Piscine Stream Community Estimation Ssytem</a></h3>
+<p>
+PiSCES delivers a fish assemblage for any NHD-Plus stream reach in the conterminous United States by
+referencing HUC-based distributional information for over 1,000 native and non-native species obtained from
+NatureServe, the USGS, and the Peterson Field Guide to Freshwater Fishes of North America. In addition to
+using current geographic distributions, PiSCES can refine potential communities to reflect information on
+species rarity, stream size preferences, and occurrence envelopes for water quality metrics (pH, conductivity,
+turbidity, dissolved oxygen) and stream characteristics (watershed area, mean width, depth, and slope).
+ PiSCES can also create an abundance distribution for a fish community using an approach that associates
+ abundance of a species to its maximum body size.
+</p>
+

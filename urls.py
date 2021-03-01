@@ -6,7 +6,11 @@ from django.urls import include, path, re_path
 from .views import landing
 from .views import server_access
 
-if settings.IS_PUBLIC:
+if settings.IN_PROD:
+    urlpatterns = [
+        # re_path(r'^$', landing.splash_landing_page),
+    ]
+elif settings.IS_PUBLIC:
     urlpatterns = [
         #url(r'^api/', include('api.urls')),
         #url(r'^rest/', include('REST.urls')),

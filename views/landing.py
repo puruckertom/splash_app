@@ -21,6 +21,8 @@ def splash_landing_page(request):
     #text_file2 = open(os.path.join(os.environ['PROJECT_PATH'], 'splash_app/views/landing_text.txt'), 'r')
     #xx = text_file2.read()
     xx = get_html_text('landing_text.txt')
+    if settings.IN_PROD:
+        xx = get_html_text('landing_text_prod.txt')
     #drupal template for header with bluestripe
     #templates_qed/drupal_2017
     html = render_to_string('01epa_drupal_header.html', {
@@ -50,7 +52,9 @@ def splash_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if os.environ.get('IS_PUBLIC') == "True":
+    if settings.IN_PROD:
+        html += links_left.ordered_list_prod()
+    elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
@@ -136,7 +140,9 @@ def whoami_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if settings.IS_PUBLIC:
+    if settings.IN_PROD:
+        html += links_left.ordered_list_prod()
+    elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
@@ -181,7 +187,9 @@ def wiki_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if settings.IS_PUBLIC:
+    if settings.IN_PROD:
+        html += links_left.ordered_list_prod()
+    elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
@@ -224,7 +232,9 @@ def source_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if settings.IS_PUBLIC:
+    if settings.IN_PROD:
+        html += links_left.ordered_list_prod()
+    elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
@@ -267,7 +277,9 @@ def api_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if settings.IS_PUBLIC:
+    if settings.IN_PROD:
+        html += links_left.ordered_list_prod()
+    elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
@@ -310,7 +322,9 @@ def rest_landing_page(request):
     html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if settings.IS_PUBLIC:
+    if settings.IN_PROD:
+        html += links_left.ordered_list_prod()
+    elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
@@ -346,10 +360,10 @@ def file_not_found(request, exception=None):
 
     html += render_to_string('02epa_drupal_header_bluestripe.html', {})
     html += render_to_string('03epa_drupal_section_title.html', {})
-    if settings.IS_PUBLIC:
-        html += render_to_string('04qed_splash_landing_public.html', {'title': 'qed'})
-    else:
-        html += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
+    # if settings.IS_PUBLIC:
+    #     html += render_to_string('04qed_splash_landing_public.html', {'title': 'qed'})
+    # else:
+    #     html += render_to_string('04qed_splash_landing_intranet.html', {'title': 'qed'})
     html += render_to_string('09epa_drupal_splashscripts.html', {})
     html += render_to_string('10epa_drupal_footer.html', {})
     response = HttpResponse(status=404)
@@ -369,19 +383,30 @@ def page_404(request, exception=None):
     # templates_qed/drupal_2017
     html += render_to_string('02epa_drupal_header_bluestripe_onesidebar.html', {})
     # templates_qed/splash
-    html += render_to_string('03epa_drupal_section_title_splash.html', {})
-
-    # templates_qed/uber2017
-    html += render_to_string('06ubertext_start_index_drupal.html', {
-        'TITLE': 'Environmental Models and Services',
-        'TEXT_PARAGRAPH': page_body
-    })
-
-    # templates_qed/uber2017
-    html += render_to_string('07ubertext_end_drupal.html', {})
+    if settings.IN_PROD:
+        html += render_to_string('03epa_drupal_section_notitle_splash.html', {})
+        # templates_qed/uber2017
+        html += render_to_string('06ubertext_start_prod_drupal.html', {
+            'TITLE': "",
+            'TEXT_PARAGRAPH': page_body
+        })
+        # templates_qed/uber2017
+        html += render_to_string('07ubertext_end_drupal.html', {})
+    else:
+        html += render_to_string('03epa_drupal_section_title_splash.html', {})
+        # templates_qed/uber2017
+        html += render_to_string('06ubertext_start_index_drupal.html', {
+            'TITLE': 'Environmental Models and Services',
+            'TEXT_PARAGRAPH': page_body
+        })
+        # templates_qed/uber2017
+        html += render_to_string('07ubertext_end_drupal.html', {})
 
     # fills out 05ubertext_links_left_drupal.html
-    if settings.IS_PUBLIC:
+    if settings.IN_PROD:
+        # html += links_left.ordered_list_prod()
+        pass
+    elif os.environ.get('IS_PUBLIC') == "True":
         html += links_left.ordered_list_external()
     else:
         html += links_left.ordered_list_internal()
